@@ -119,7 +119,7 @@ public class Client2 {
 		ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
 		Leave_req leave_req = new Leave_req();
 		LinkedList<String> file_name = new LinkedList<String>();
-		File file = new File("//Users//gaohan//Documents//workspace//P2PFileShareSystem//file");
+		File file = new File("//Users//gaohan//Documents//workspace//P2P File Share System//file");
 		File[] files = file.listFiles();
 		for (File f : files) {
 			int length = (int) f.length();
@@ -146,11 +146,11 @@ public class Client2 {
 			System.out.println("please input the index\n1.Regist file\n2.Get file list\n3.Download\n4.Leave ");
 			Scanner scanner = new Scanner(System.in);
 			String func = scanner.nextLine();
-			scanner.close();
+			//scanner.close();
 			switch (func) {
 			case "1":
 				System.out.println("Please input a directory or file name");
-				scanner = new Scanner(System.in);
+				//scanner = new Scanner(System.in);
 				Reg_file(scanner.nextLine());
 				break;
 			case "2":
@@ -158,7 +158,7 @@ public class Client2 {
 				break;
 			case "3":
 				System.out.println("Please input file name");
-				scanner = new Scanner(System.in);
+			//	scanner = new Scanner(System.in);
 				File_loc_req(scanner.nextLine());
 				break;
 			case "4":
